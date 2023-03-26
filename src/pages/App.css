@@ -27,14 +27,9 @@
     border-width: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 15px;
-}
-.submitter:hover{
-    @apply text-white;
-    @apply bg-rh-deep-purple;
-    @apply cursor-pointer;
+    padding-top:
+    @apply hover:bg-rh-forrest;
+    @apply hover:text-rh-black;
 }
 
 .textArea {
@@ -42,4 +37,3 @@
     margin: 0 auto;
     text-align: center;
 }
-
