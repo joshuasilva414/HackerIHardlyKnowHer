@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Info {
+  text-align: center;
+}
+
+.TopPage {
+  @apply border-rh-deep-purple;
+  border-width: 5px;
+  border-style: solid;
+}
