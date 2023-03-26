@@ -17,7 +17,14 @@ function Landing() {
           <div 
             className="flex justify-start"
           >
-            <img src={rnlogo} alt="Rosetta News" width="32" height="6"/>
+            <div className="border-solid 
+              border-2 border-rh-space-blue 
+              bg-sky-600 rounded-3xl m-2 text-2xl 
+              font-serif font-bold italic underline 
+              underline-offset-1 px-2 py-2 m-auto"
+            >
+              RN
+            </div>
           </div>
 
           <div 
