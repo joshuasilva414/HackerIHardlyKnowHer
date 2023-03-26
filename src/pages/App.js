@@ -43,6 +43,7 @@ function App() {
   };
 
   return (
+    <body>
     <div className="App">
       <div className="Title">
         <a className="px-2" href="/">
@@ -70,6 +71,7 @@ function App() {
         </div>
       </div>
     </div>
+    </body>
   );
 }
 
