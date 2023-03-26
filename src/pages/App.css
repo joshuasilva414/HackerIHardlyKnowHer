@@ -21,12 +21,15 @@
 .submitter {
     display: inline-block;
     @apply font-mono;
-    @apply text-rh-white;
+    @apply text-rh-black;
     border-color: black;
     border-style: solid;
     border-width: 2px;
     padding-left: 10px;
     padding-right: 10px;
+<<<<<<< HEAD
+    padding-top:
+=======
     /* padding-top: */
     @apply hover:bg-rh-forrest hover:text-rh-black;
 }
