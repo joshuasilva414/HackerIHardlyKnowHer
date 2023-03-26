@@ -1,16 +1,21 @@
 import "./App.css";
 import { useEffect, useState, useCallback } from "react";
 // import icon from "../newsIMG.png";
-import { article } from "../dummyData";
+// import { article } from "../dummyData";
+import { parse } from "../utils.js/parser";
 import { HfInference } from "@huggingface/inference";
 
 function App() {
-  const [url, setUrl] = useState("");
+  const [inputURL, setUrl] = useState(
+    "https://www.washingtonpost.com/weather/2023/03/26/mississippi-tornadoes-alabama-storm-damage/"
+  );
   const [summary, setSummary] = useState("");
 
   const fetchTranslation = useCallback(
-    async (text) => {
+    async (url) => {
       try {
+        const text = await parse(url);
+        console.log("Text: ", text);
         const hf = await new HfInference(process.env.REACT_APP_HF_KEY, {
           retry_on_error: true,
           wait_for_model: true,
@@ -25,18 +30,19 @@ function App() {
         setSummary(res.summary_text);
         console.log("Summary: ", summary);
       } catch (err) {
-        console.log(err.message);
+        console.log(err);
       }
     },
     [summary]
   );
 
   useEffect(() => {
-    fetchTranslation(article);
+    fetchTranslation(inputURL);
   }, [fetchTranslation]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    fetchTranslation(inputURL);
   };
 
   return (
@@ -52,14 +58,18 @@ function App() {
             className="searcher"
             type="text"
             placeholder="Enter URL"
-            value={url}
+            value={inputURL}
             onChange={(e) => setUrl(e.target.value)}
           ></input>
           <input className="submitter" type="submit" value="Submit"></input>
         </form>
       </div>
-      <div className="feedback">
+      <div className="textArea flex">
+      <div>
+        </div
+      <div className="feedback flex-fr justify-center w-24 border-black border-2 border-double">
         <p>{summary}</p>
+      </div>
       </div>
     </div>
   );

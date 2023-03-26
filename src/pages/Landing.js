@@ -6,8 +6,8 @@ function Landing() {
       <header>
         {/* Navigation Menu */}
         <div className="flex justify-between flex-wrap gap-2 border-box max-w h-16 p-2 bg-rh-ocean-blue font-bold text-rh-white border-solid border-4 border-rh-space-blue">
-          <div className="flex justify-start border-solid border-2 border-rh-space-blue">
-            Rosetta News
+          <div className="flex justify-start font-mono text-2xl font-bold italic tracking-tighter underline underline-offset-1 border-solid border-2 border-rh-space-blue shadow-md my-auto px-2 py-1 bg-rh-sunset">
+            RN
           </div>
 
           <div className="flex justify-end">
@@ -37,6 +37,15 @@ function Landing() {
                 Credits
               </a>
             </div>
+
+            <div className="border-solid border-2 border-rh-space-blue bg-rh-deep-purple rounded-lg m-2">
+              <a
+                href="#credits"
+                class="hover:text-rh-white hover:underline my-8 mx-16"
+              >
+                Try it here!
+              </a>
+            </div>
           </div>
         </div>
         {/* End of Navigation Menu */}
@@ -44,7 +53,7 @@ function Landing() {
       <main className="min-h-screen">
         <div className="flex justify-evenly border-solid border-4 border-rh-space-blue">
           {/* Start of Title Half*/}
-          <div className="flex-1 borderbox w-1/2 h-96 border-solid border-2 border-rh-space-blue">
+          <div className="flex-1 borderbox w-1/2 h-96 border-solid border-4 border-rh-space-blue">
             <div className="flex-none">
               <h1 className="font-serif text-rh-ocean-blue text-center text-4xl font-bold mx-auto mt-14 mb-3 py-4 px-2 border-box w-1/2 h-23 border-solid border-2 border-rh-ocean-blue rounded-3xl bg-rh-deep-purple">Rosetta News</h1>
             </div>
@@ -80,7 +89,7 @@ function Landing() {
           {/* End of Title Half */}
 
           {/* Start of Media Half */}
-          <div className="flex-wrap borderbox w-1/2 h-96 border-solid border-2 border-rh-space-blue">
+          <div className="flex-wrap borderbox w-1/2 h-96 border-solid border-4 border-rh-space-blue m-auto">
             <p className="YThead"> What does it look like in effect? </p>
           <iframe className="YTvid" src="https://www.youtube.com/embed/x8gdOPO35HA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
@@ -88,8 +97,8 @@ function Landing() {
         </div>
 
         {/* Start of Summary */}
-        <div id="summary" className="border-box w-full h-96 border-solid border-4 border-rh-space-blue font-bold">
-          <div className="text-4xl text-left ml-16 mt-8 mb-4">
+        <div className="border-box w-full h-96 border-solid border-4 border-rh-space-blue font-bold">
+          <div id="summary" className="text-4xl text-left ml-16 mt-8 mb-4">
             Summary
           </div>
 
@@ -120,7 +129,7 @@ function Landing() {
       <footer>
         <div id="credits" className="bg-rh-white w-full h-16 border-solid border-4 border-rh-space-blue">
           <div className="font-bold text-xl text-center">
-            <h2>This project was created in collaboration by:</h2>
+            <h2 id="credits" >This project was created in collaboration by:</h2>
           </div>
           <div className="flex justify-evenly">
             <a

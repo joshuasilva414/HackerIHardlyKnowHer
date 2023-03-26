@@ -5,10 +5,17 @@
 .Title {
     display: inline-block;
     font-size: 50px;
-    @apply bg-rh-ocean-blue;
-    color: white;
-    margin-top: 10px;
+    @apply bg-rh-deep-purple;
+    @apply text-rh-ocean-blue;
+    @apply font-bold;
+    @apply border-double;
+    @apply border-rh-ocean-blue;
+    @apply border-2;
+    @apply rounded-lg;
+    margin: 10px;
     padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .submitter {
