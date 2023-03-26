@@ -2,19 +2,16 @@ import "./App.css";
 import { useEffect, useState, useCallback } from "react";
 // import icon from "../newsIMG.png";
 // import { article } from "../dummyData";
-import { parse } from "../utils.js/parser";
+// import { parse } from "../utils.js/parser";
 import { HfInference } from "@huggingface/inference";
 
 function App() {
-  const [inputURL, setUrl] = useState(
-    "https://www.washingtonpost.com/weather/2023/03/26/mississippi-tornadoes-alabama-storm-damage/"
-  );
+  const [input, setInput] = useState("");
   const [summary, setSummary] = useState("");
 
-  const fetchTranslation = useCallback(
-    async (url) => {
+  const fetchSummary = useCallback(
+    async (text) => {
       try {
-        const text = await parse(url);
         console.log("Text: ", text);
         const hf = await new HfInference(process.env.REACT_APP_HF_KEY, {
           retry_on_error: true,
@@ -37,12 +34,12 @@ function App() {
   );
 
   useEffect(() => {
-    fetchTranslation(inputURL);
-  }, [fetchTranslation]);
+    fetchSummary(input);
+  }, [fetchSummary]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchTranslation(inputURL);
+    fetchSummary(input);
   };
 
   return (
@@ -52,24 +49,25 @@ function App() {
           Rosetta News
         </a>
       </div>
-      <div className="searchBar">
-        <form action="submit" onSubmit={handleSubmit}>
-          <input
-            className="searcher"
-            type="text"
-            placeholder="Enter URL"
-            value={inputURL}
-            onChange={(e) => setUrl(e.target.value)}
-          ></input>
+      <div className="my-20 min-h-fit">
+        <form
+          className="flex flex-col mx-auto max-w-xl"
+          action="submit"
+          onSubmit={handleSubmit}
+        >
+          <textarea
+            className="searcher min-h-[20rem]"
+            placeholder="Enter Article Text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          ></textarea>
           <input className="submitter" type="submit" value="Submit"></input>
         </form>
       </div>
-      <div className="textArea flex">
-      <div>
-        </div
-      <div className="feedback flex-fr justify-center w-24 border-black border-2 border-double">
-        <p>{summary}</p>
-      </div>
+      <div className="textArea h-1000 mt-3">
+        <div className="feedback self-center border-black border-2 border-double">
+          <p className="p-2">{summary}</p>
+        </div>
       </div>
     </div>
   );
