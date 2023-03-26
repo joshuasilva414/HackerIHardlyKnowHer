@@ -27,7 +27,13 @@
     border-width: 2px;
     padding-left: 10px;
     padding-right: 10px;
+<<<<<<< HEAD
     padding-top:
+=======
+    /* padding-top: */
+    @apply hover:bg-rh-forrest;
+    @apply hover:text-rh-black;
+>>>>>>> b3991aa63128084d113bda70ea9f17a6cce6783f
 }
 
 .textArea {
