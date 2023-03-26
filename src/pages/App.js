@@ -1,26 +1,39 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import icon from "../newsIMG.png";
+import { useEffect, useState, useCallback } from "react";
+// import icon from "../newsIMG.png";
+import { article } from "../dummyData";
 import { HfInference } from "@huggingface/inference";
 
 function App() {
   const [url, setUrl] = useState("");
   const [summary, setSummary] = useState("");
 
-  const hf = new HfInference(process.env.REACT_APP_HF_KEY);
-
-  const fetchTranslation = async (text) => {
-    const res = await hf.textGeneration({
-      model: "psyche/gpt2-translation",
-      inputs: [text],
-    });
-    return res;
-  };
+  const fetchTranslation = useCallback(
+    async (text) => {
+      try {
+        const hf = await new HfInference(process.env.REACT_APP_HF_KEY, {
+          retry_on_error: true,
+          wait_for_model: true,
+        });
+        const res = await hf.summarization({
+          model: "facebook/bart-large-cnn",
+          inputs: text,
+          parameters: {
+            max_length: 100,
+          },
+        });
+        setSummary(res.summary_text);
+        console.log("Summary: ", summary);
+      } catch (err) {
+        console.log(err.message);
+      }
+    },
+    [summary]
+  );
 
   useEffect(() => {
-    const translation = fetchTranslation("Это тест перевода gpt2");
-    console.log(translation);
-  }, []);
+    fetchTranslation(article);
+  }, [fetchTranslation]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +59,7 @@ function App() {
         </form>
       </div>
       <div className="feedback">
-        <p>Here is your response.</p>
+        <p>{summary}</p>
       </div>
     </div>
   );

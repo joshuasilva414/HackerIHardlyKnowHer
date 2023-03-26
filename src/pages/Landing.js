@@ -13,25 +13,25 @@ function Landing() {
           <div className="flex justify-end">
             <div className="border-solid border-2 border-rh-space-blue bg-rh-space-blue rounded-lg m-2">
               <a
-                href="#title"
+                href="#summary"
                 class="hover:text-rh-white hover:underline my-8 mx-16 align-center"
               >
-                Title
+                Summary
               </a>
             </div>
 
             <div className="border-solid border-2 border-rh-space-blue bg-rh-space-blue rounded-lg m-2">
               <a
-                href="#title"
+                href="#faq"
                 class="hover:text-rh-white hover:underline my-8 mx-16"
               >
-                About
+                FAQ
               </a>
             </div>
 
             <div className="border-solid border-2 border-rh-space-blue bg-rh-space-blue rounded-lg m-2">
               <a
-                href="#title"
+                href="#credits"
                 class="hover:text-rh-white hover:underline my-8 mx-16"
               >
                 Credits
@@ -42,9 +42,9 @@ function Landing() {
         {/* End of Navigation Menu */}
       </header>
       <main className="min-h-screen">
-        <div className="flex border-solid border-4 border-rh-space-blue">
+        <div className="flex justify-evenly border-solid border-4 border-rh-space-blue">
           {/* Start of Title Half*/}
-          <div className="flex-1 justify-center border-box w-1/2 h-96">
+          <div className="flex-1 borderbox w-1/2 h-96 border-solid border-2 border-rh-space-blue">
             <div className="flex-none">
               <h1 className="font-serif text-rh-ocean-blue text-center text-4xl font-bold mx-auto mt-14 mb-3 py-4 px-2 border-box w-1/2 h-23 border-solid border-2 border-rh-ocean-blue rounded-3xl bg-rh-deep-purple">Rosetta News</h1>
             </div>
@@ -75,16 +75,12 @@ function Landing() {
               >
                 Try Rosetta News!
               </a>
-            </div>
-
-            <div className="flex-2 justify-center"> 
-
-            </div>        
+            </div>       
           </div>
           {/* End of Title Half */}
 
           {/* Start of Media Half */}
-          <div className="flex-wrap justify-center borderbox w-1/2 h-96 border-solid border-2 border-rh-space-blue">
+          <div className="flex-wrap borderbox w-1/2 h-96 border-solid border-2 border-rh-space-blue">
             <p className="YThead"> What does it look like in effect? </p>
           <iframe className="YTvid" src="https://www.youtube.com/embed/x8gdOPO35HA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
@@ -92,7 +88,7 @@ function Landing() {
         </div>
 
         {/* Start of Summary */}
-        <div className="border-box w-full h-96 border-solid border-4 border-rh-space-blue font-bold">
+        <div id="summary" className="border-box w-full h-96 border-solid border-4 border-rh-space-blue font-bold">
           <div className="text-4xl text-left ml-16 mt-8 mb-4">
             Summary
           </div>
@@ -104,7 +100,7 @@ function Landing() {
         {/* End of Summary */}
         
         {/* Start of FAQ */}
-        <div className="border-box w-full h-96 border-solid border-4 border-rh-space-blue font-bold">
+        <div id="faq" className="border-box w-full h-96 border-solid border-4 border-rh-space-blue font-bold">
           <div className="text-4xl text-left ml-16 mt-8 mb-4">
             FAQ
           </div>
@@ -122,7 +118,7 @@ function Landing() {
       </main>
       {/* Start of Footer */}
       <footer>
-        <div className="bg-rh-white w-full h-16 border-solid border-4 border-rh-space-blue">
+        <div id="credits" className="bg-rh-white w-full h-16 border-solid border-4 border-rh-space-blue">
           <div className="font-bold text-xl text-center">
             <h2>This project was created in collaboration by:</h2>
           </div>

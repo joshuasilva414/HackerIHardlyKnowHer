@@ -30,7 +30,7 @@ li a {
 }
 
 h1 {
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 h2 {
@@ -62,4 +62,19 @@ h2 {
   display: flex;
   justify-content: center;
   margin: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  border-style: double;
+  border-width: 2px;
+  @apply border-rh-ocean-blue;
+  @apply text-rh-ocean-blue;
+  @apply bg-rh-deep-purple;
+  @apply rounded-lg;
+}
+.YTvid {
+  display: flex;
+  margin: auto;
+  width: 500px;
+  height: 250px;
 }
