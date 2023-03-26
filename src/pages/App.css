@@ -21,15 +21,20 @@
 .submitter {
     display: inline-block;
     @apply font-mono;
-    @apply text-rh-white;
+    @apply text-rh-black;
     border-color: black;
     border-style: solid;
     border-width: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top:
-    @apply hover:bg-rh-forrest;
-    @apply hover:text-rh-black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+.submitter:hover{
+    @apply text-white;
+    @apply bg-rh-deep-purple;
+    @apply cursor-pointer;
 }
 
 .textArea {

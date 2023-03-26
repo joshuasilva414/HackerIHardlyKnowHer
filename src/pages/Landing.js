@@ -6,12 +6,12 @@ function Landing() {
       <header>
         {/* Navigation Menu */}
         <div className="flex justify-between flex-wrap gap-2 border-box max-w h-16 p-2 bg-rh-ocean-blue font-bold text-rh-white">
-          <div className="flex justify-start font-serif text-2xl font-bold italic tracking-tighter underline underline-offset-1 border-solid border-2 border-rh-space-blue shadow-md my-auto px-2 py-1 bg-rh-sunset">
+          <div className="flex justify-start font-serif text-2xl font-bold italic tracking-tighter underline underline-offset-1 border-solid border-2 border-rh-space-blue shadow-md my-auto px-2 py-1 bg-blue-400">
             RN
           </div>
 
           <div className="flex justify-end">
-            <div className="border-solid border-2 border-rh-space-blue bg-rh-space-blue rounded-lg m-2">
+            <div className="border-solid border-2 border-rh-space-blue bg-sky-800 rounded-lg m-2">
               <a
                 href="#summary"
                 class="hover:text-rh-white hover:underline my-8 mx-16 align-center"
@@ -20,7 +20,7 @@ function Landing() {
               </a>
             </div>
 
-            <div className="border-solid border-2 border-rh-space-blue bg-rh-space-blue rounded-lg m-2">
+            <div className="border-solid border-2 border-rh-space-blue bg-sky-800 rounded-lg m-2">
               <a
                 href="#faq"
                 class="hover:text-rh-white hover:underline my-8 mx-16"
@@ -29,7 +29,7 @@ function Landing() {
               </a>
             </div>
 
-            <div className="border-solid border-2 border-rh-space-blue bg-rh-space-blue rounded-lg m-2">
+            <div className="border-solid border-2 border-rh-space-blue bg-sky-800 rounded-lg m-2">
               <a
                 href="#credits"
                 class="hover:text-rh-white hover:underline my-8 mx-16"
@@ -38,7 +38,7 @@ function Landing() {
               </a>
             </div>
 
-            <div className="border-solid border-2 border-rh-space-blue bg-rh-deep-purple rounded-lg m-2">
+            <div className="border-solid border-2 border-rh-space-blue bg-sky-500 rounded-lg m-2">
               <a
                 href="/app"
                 class="hover:text-rh-white hover:underline my-8 mx-16"
@@ -55,7 +55,7 @@ function Landing() {
           {/* Start of Title Half*/}
           <div className="flex-1 borderbox w-1/2 h-96 border-solid border-4 border-rh-space-blue">
             <div className="flex-none">
-              <h1 className="font-serif text-rh-ocean-blue text-center text-4xl font-bold mx-auto mt-14 mb-3 py-4 px-2 border-box w-1/2 h-23 border-solid border-2 border-rh-ocean-blue rounded-3xl bg-rh-sunset">Rosetta News</h1>
+              <h1 className="font-serif text-rh-ocean-blue text-center text-4xl font-bold mx-auto mt-14 mb-3 py-4 px-2 border-box w-1/2 h-23 border-solid border-2 border-rh-ocean-blue rounded-3xl bg-blue-400">Rosetta News</h1>
             </div>
             <div className="flex flex-col"> 
               <p 
@@ -69,7 +69,7 @@ function Landing() {
                 class="
                 m-auto
                 font-serif
-                bg-rh-deep-purple
+                bg-blue-400
                 text-rh-ocean-blue
                 rounded-lg
                 border-double
