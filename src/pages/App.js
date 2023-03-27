@@ -75,48 +75,52 @@ function App() {
 
   return (
     <body>
-    <div className="App">
-      <div className="Title">
-        <a className="px-2" href="/">
-          Rosetta News
-        </a>
-      </div>
-      <div className="">
-        <button
-          className="p-4 bg-rh-deep-purple text-rh-white rounded-md"
-          onClick={() => setLanguage("English")}
-        >
-          English
-        </button>
-        <button
-          className="p-4 bg-rh-deep-purple text-rh-white rounded-md"
-          onClick={() => setLanguage("Chinese_China")}
-        >
-          Chinese
-        </button>
-        {/* <button onClick={() => setLanguage("English")}>English</button> */}
-      </div>
-      <div className="my-20 min-h-fit">
-        <form
-          className="flex flex-col mx-auto max-w-xl"
-          action="submit"
-          onSubmit={handleSubmit}
-        >
-          <textarea
-            className="searcher min-h-[20rem]"
-            placeholder="Enter Article Text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          ></textarea>
-          <input className="submitter" type="submit" value="Submit"></input>
-        </form>
-      </div>
-      <div className="textArea h-1000 mt-3">
-        <div className="feedback self-center border-black border-2 border-double">
-          <p className="p-2 text-rh-white">{summary}</p>
+      <div className="App">
+        <div className="Title">
+          <a className="px-2" href="/">
+            Rosetta News
+          </a>
+        </div>
+        <div className="">
+          <button
+            className="p-4 bg-rh-deep-purple text-rh-white rounded-md"
+            onClick={() => setLanguage("English")}
+          >
+            English
+          </button>
+          <button
+            className="p-4 bg-rh-deep-purple text-rh-white rounded-md"
+            onClick={() => setLanguage("Chinese_China")}
+          >
+            Chinese
+          </button>
+          {/* <button onClick={() => setLanguage("English")}>English</button> */}
+        </div>
+        <div className="my-20 min-h-fit">
+          <form
+            className="flex flex-col mx-auto max-w-xl"
+            action="submit"
+            onSubmit={handleSubmit}
+          >
+            <textarea
+              className="searcher min-h-[20rem]"
+              placeholder="Enter Article Text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            ></textarea>
+            <input
+              className="submitter hover:bg-rh-forrest hover:text-rh-black"
+              type="submit"
+              value="Submit"
+            ></input>
+          </form>
+        </div>
+        <div className="textArea h-1000 mt-3">
+          <div className="feedback self-center border-black border-2 border-double">
+            <p className="p-2 text-rh-white">{summary}</p>
+          </div>
         </div>
       </div>
-    </div>
     </body>
   );
 }
